@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test-tree</title>
+	<script type="text/javascript" src="js/knockout-3.4.1.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<style type="text/css">
+		
+		#second {
+			width: 300px;
+			/*height: 400px;*/
+			background: #52c1df;
+			float: left;
+			border: 1px solid;
+			margin-right: 5px;
+		}
+		ul li {
+			list-style-type: none;
+			display: block;
+			margin-top: 10px;
+		}
+		ul.category li {
+			background: #666111;
+		}
+		ul.group li {
+			background: #333333;
+		}
+		ul.team li {
+			background: #444444;
+		}
+		ul.person li {
+			background: #999999;
+		}
+		.menu {
+			display: none;
+			font-size: 12px;
+			background: #000;
+			opacity: 0.5;
+			width: 78px;
+			border-radius: 4px;
+			text-align: center;
+		}
+		.menu a{
+			text-decoration: none;
+			color: #fff;
+			display: block;
+			margin-top: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div id="first">
+		
+	</div>
+	<div id="second">
+		<div class="head">
+			<h4 mouseon="showlist()">xx公司</h4>
+			<div class="menu">
+				<a href="#">添加下级部门</a>
+				<a href="#">移动至</a>
+				<a href="#">添加编辑</a>
+				<a href="#">删除</a>
+			</div>
+		</div>
+		<ul class="category">
+			<li class="category-content" onclick="showlist()">A部门
+				<div class="menu">
+					<a href="#">添加下级部门</a>
+					<a href="#">移动至</a>
+					<a href="#">添加编辑</a>
+					<a href="#">删除</a>
+				</div>
+			</li>
+			<li class="category-content" onclick="showlist()">B部门
+				<div class="menu">
+					<a href="#">添加下级部门</a>
+					<a href="#">移动至</a>
+					<a href="#">添加编辑</a>
+					<a href="#">删除</a>
+				</div>
+			</li>
+			<li class="category-content" onclick="showlist()">C部门
+				<div class="menu">
+					<a href="#">添加下级部门</a>
+					<a href="#">移动至</a>
+					<a href="#">添加编辑</a>
+					<a href="#">删除</a>
+				</div>
+				<ul class="group">
+					<li class="group-content" onclick="showlist()">甲组
+						<div class="menu">
+							<a href="#">添加下级部门</a>
+							<a href="#">移动至</a>
+							<a href="#">添加编辑</a>
+							<a href="#">删除</a>
+						</div>
+					</li>
+					<li class="group-content" onclick="showlist()">乙组
+						<div class="menu">
+							<a href="#">添加下级部门</a>
+							<a href="#">移动至</a>
+							<a href="#">添加编辑</a>
+							<a href="#">删除</a>
+						</div>
+					</li>
+					<li class="group-content" onclick="showlist()">丙组
+						<div class="menu">
+							<a href="#">添加下级部门</a>
+							<a href="#">移动至</a>
+							<a href="#">添加编辑</a>
+							<a href="#">删除</a>
+						</div>
+
+						<ul class="team">
+							<li class="team-content">1队
+								<div class="menu">
+									<a href="#">添加下级部门</a>
+									<a href="#">移动至</a>
+									<a href="#">添加编辑</a>
+									<a href="#">删除</a>
+								</div>
+								<ul class="person">
+									<li>a</li>
+									<li>b</li>
+									<li>c</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="group-content" onclick="showlist()">丁组
+						<div class="menu">
+							<a href="#">添加下级部门</a>
+							<a href="#">移动至</a>
+							<a href="#">添加编辑</a>
+							<a href="#">删除</a>
+						</div>
+
+						<ul class="team">
+							<li class="team-content">1队
+								<div class="menu">
+									<a href="#">添加下级部门</a>
+									<a href="#">移动至</a>
+									<a href="#">添加编辑</a>
+									<a href="#">删除</a>
+								</div>
+							</li>
+							<li class="team-content">2队
+								<div class="menu">
+									<a href="#">添加下级部门</a>
+									<a href="#">移动至</a>
+									<a href="#">添加编辑</a>
+									<a href="#">删除</a>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="group-content" onclick="showlist()">戊组
+						<div class="menu">
+							<a href="#">添加下级部门</a>
+							<a href="#">移动至</a>
+							<a href="#">添加编辑</a>
+							<a href="#">删除</a>
+						</div>
+					</li>
+					<li class="group-content" onclick="showlist()">己组
+						<div class="menu">
+							<a href="#">添加下级部门</a>
+							<a href="#">移动至</a>
+							<a href="#">添加编辑</a>
+							<a href="#">删除</a>
+						</div>
+					</li>
+				</ul>
+			</li>
+			<li class="category-content" onclick="showlist()">D部门
+				<div class="menu">
+					<a href="#">添加下级部门</a>
+					<a href="#">移动至</a>
+					<a href="#">添加编辑</a>
+					<a href="#">删除</a>
+				</div>
+			</li>
+			<li class="category-content" onclick="showlist()">E部门
+				<div class="menu">
+					<a href="#">添加下级部门</a>
+					<a href="#">移动至</a>
+					<a href="#">添加编辑</a>
+					<a href="#">删除</a>
+				</div>
+			</li>
+			<li class="category-content" onclick="showlist()">F部门
+				<div class="menu">
+					<a href="#">添加下级部门</a>
+					<a href="#">移动至</a>
+					<a href="#">添加编辑</a>
+					<a href="#">删除</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+<script type="text/javascript">
+	/*function viewModel() {
+
+		this.AttrMenuView = ko.observable(0);
+
+		this.ShowMenu = function () {
+			// $(this).children('div.menu').css({'display' : 'block'});
+			$('.menu').css({'display' : 'block'});
+		}
+	}
+	var view_model = new viewModel();
+	ko.applyBindings(view_model);*/
+	
+	function showlist () {
+		$(this).children('div.menu').toggle();
+	
+	}
+	
+</script>
+</html>
